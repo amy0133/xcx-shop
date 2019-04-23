@@ -19,10 +19,12 @@
   <!-- content -->
   <!-- 推荐 -->
   <view class="tab-cnt" hidden="{{tabIndex != 0}}">
-    <view class="tab-item" wx:for="{{icons}}" wx:for-item="ic" wx:key="{{ic}}">
-      <image class="tab-image" src="{{ic.icon}}"/>
-      <text class="tab-text">{{ic.title}}</text>
-    </view>
+    <navigator class="tab-item" wx:for="{{icons}}" wx:for-item="ic" wx:key="{{ic}}" url="../detail/detail?id={{ic.id}}" >
+      <view>
+        <image class="tab-image" src="{{ic.icon}}"/>
+        <text class="tab-text">{{ic.title}}</text>
+      </view>
+    </navigator>
   </view>
 
   <!-- 排行榜 -->
