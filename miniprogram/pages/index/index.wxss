@@ -1,4 +1,5 @@
 /**index.wxss**/
+.container{padding: 60rpx 0;}
 .head-tab{
   position: fixed;
   top: 0;
@@ -9,6 +10,7 @@
   display: flex;
   align-content: center;
   justify-content: center;
+  background-color: #ffffff;
 }
 
 .head-tab .tab-item{
@@ -23,5 +25,34 @@
 }
 
 .head-tab .tab-item.selected .tab-text{
-  border-bottom: 1px solid #B92D17;
+  border-bottom: 2px solid #B92D17;
+}
+
+.tab-cnt{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-flow: row wrap;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.tab-cnt .tab-item{
+  flex: 1;
+  height: 170px;
+  width: 115px;
+}
+
+.tab-cnt .tab-item .tab-image{
+  width: 115px;
+  height: 115px;
+  border-radius: 115px;
+}
+
+.tab-cnt .tab-item .tab-text{
+  color: #666666;
+  font-size: 12px;
+  text-align: center;
+  width: 100%;
+  display: block;
 }

@@ -19,7 +19,10 @@
   <!-- content -->
   <!-- 推荐 -->
   <view class="tab-cnt" hidden="{{tabIndex != 0}}">
-    <text >推荐</text>
+    <view class="tab-item" wx:for="{{icons}}" wx:for-item="ic" wx:key="{{ic}}">
+      <image class="tab-image" src="{{ic.icon}}"/>
+      <text class="tab-text">{{ic.title}}</text>
+    </view>
   </view>
 
   <!-- 排行榜 -->
