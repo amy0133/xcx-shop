@@ -1,13 +1,39 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+  <!-- header -->
+  <view id="headTab" class="head-tab">
+    <view class="tab-item {{tabIndex == 0 ? 'selected' : ''}}" bind:tap="switchTab" data-index="0">
+      <text class="tab-text">推荐</text>
+    </view>
+    <view class="tab-item {{tabIndex == 1 ? 'selected' : ''}}" bind:tap="switchTab" data-index="1">
+      <text class="tab-text">排行榜</text>
+    </view>
+    <view class="tab-item {{tabIndex == 2 ? 'selected' : ''}}" bind:tap="switchTab" data-index="2">
+      <text class="tab-text">新品</text>
+    </view>
+    <view class="tab-item {{tabIndex == 3 ? 'selected' : ''}}" bind:tap="switchTab" data-index="3">
+      <text class="tab-text">分类</text>
+    </view>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+
+  <!-- content -->
+  <!-- 推荐 -->
+  <view class="tab-cnt" hidden="{{tabIndex != 0}}">
+    <text >推荐</text>
+  </view>
+
+  <!-- 排行榜 -->
+  <view class="tab-cnt" hidden="{{tabIndex != 1}}">
+    <text >排行榜</text>
+  </view>
+
+  <!-- 新品 -->
+  <view class="tab-cnt" hidden="{{tabIndex != 2}}">
+    <text >新品</text>
+  </view>
+
+  <!-- 分类 -->
+  <view class="tab-cnt" hidden="{{tabIndex != 3}}">
+    <text >分类</text>
   </view>
 </view>

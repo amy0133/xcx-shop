@@ -11,8 +11,8 @@
   },
   "sitemapLocation": "sitemap.json",
   "tabBar": {
-    "color": "#aaa",
-    "selectedColor": "#fff",
+    "color": "#e6e6e6",
+    "selectedColor": "#B92D17",
     "borderStyle": "black",
     "backgroundColor": "#212121",
     "list": [
@@ -25,7 +25,7 @@
         "pagePath": "pages/index/index",
         "iconPath": "images/love.png",
         "selectedIconPath": "images/love-selected.png",
-        "text": "我的"
+        "text": "收藏"
       }
     ]
   }
