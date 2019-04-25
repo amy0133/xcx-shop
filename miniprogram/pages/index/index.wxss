@@ -30,23 +30,24 @@
 
 .tab-cnt{
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-direction: row;
   flex-flow: row wrap;
-  padding: 10px;
+  flex-wrap: wrap;
+  padding: 10px 10px 10px 0;
   box-sizing: border-box;
 }
 
 .tab-cnt .tab-item{
-  flex: 1;
-  height: 170px;
-  width: 115px;
+  height: 100px;
+  text-align: center;
+  margin-left: 8px;
 }
 
 .tab-cnt .tab-item .tab-image{
-  width: 115px;
-  height: 115px;
-  border-radius: 115px;
+  width: 64px;
+  height: 64px;
+  border-radius: 64px;
 }
 
 .tab-cnt .tab-item .tab-text{
