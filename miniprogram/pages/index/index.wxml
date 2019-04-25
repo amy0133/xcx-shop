@@ -21,8 +21,8 @@
   <view class="tab-cnt" hidden="{{tabIndex != 0}}">
     <navigator class="tab-item" wx:for="{{icons}}" wx:for-item="ic" wx:key="{{ic}}" url="../detail/detail?id={{ic.id}}" >
       <view>
-        <image class="tab-image" src="{{ic.icon}}"/>
-        <text class="tab-text">{{ic.title}}</text>
+        <image class="tab-image" src="{{ic.logo}}"/>
+        <text class="tab-text">{{ic.name}}1</text>
       </view>
     </navigator>
   </view>
